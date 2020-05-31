@@ -35,6 +35,8 @@ import {
 
 // core components
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar.js";
+import IndexNavbar from "../../components/Navbars/IndexNavbar.js";
+
 import Footer from "../../components/Footer/Footer.js";
 
 import bigChartData from "../../variables/charts.js";
@@ -49,7 +51,7 @@ class LandingPage extends React.Component {
   render() {
     return (
       <>
-        <ExamplesNavbar />
+        <IndexNavbar />
         <div className="wrapper">
           <div className="page-header">
             <img

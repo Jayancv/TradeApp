@@ -109,14 +109,16 @@ class Tabs extends React.Component {
                                         activeTab={"link" + this.state.iconTabs}
                                     >
                                         <TabPane tabId="link1">
-                                            <p>
-                                                Collaboratively administrate empowered markets via
-                                                plug-and-play networks. Dynamically procrastinate B2C
-                                                users after installed base benefits. <br/>
-                                                <br/>
-                                                Dramatically visualize customer directed convergence
-                                                without revolutionary ROI.
-                                            </p>
+                                            <h4>
+                                                Tube 1 <br/>
+
+                                            </h4>
+                                            <img
+                                                alt="..."
+                                                className="img-fluid rounded shadow"
+                                                src={require("../../../resources/static/assets/img/prod_1.jpg")}
+                                                style={{ width: "300px" }}
+                                            />
                                         </TabPane>
                                         <TabPane tabId="link2">
                                             <p>
@@ -203,6 +205,12 @@ class Tabs extends React.Component {
                                                 Dramatically visualize customer directed convergence
                                                 without revolutionary ROI.
                                             </p>
+                                            <img
+                                                alt="..."
+                                                className="img-fluid rounded shadow"
+                                                src={require("../../../resources/static/assets/img/prod_2.jpg")}
+                                                style={{ width: "150px" }}
+                                            />
                                         </TabPane>
                                         <TabPane tabId="link5">
                                             <p>
@@ -289,6 +297,12 @@ class Tabs extends React.Component {
                                                 Dramatically visualize customer directed convergence
                                                 without revolutionary ROI.
                                             </p>
+                                            <img
+                                                alt="..."
+                                                className="img-fluid rounded shadow"
+                                                src={require("../../../resources/static/assets/img/prod_3.jpg")}
+                                                style={{ width: "150px" }}
+                                            />
                                         </TabPane>
                                         <TabPane tabId="link8">
                                             <p>
@@ -375,6 +389,12 @@ class Tabs extends React.Component {
                                                 Dramatically visualize customer directed convergence
                                                 without revolutionary ROI.
                                             </p>
+                                            <img
+                                                alt="..."
+                                                className="img-fluid rounded shadow"
+                                                src={require("../../../resources/static/assets/img/prod_4.jpg")}
+                                                style={{ width: "150px" }}
+                                            />
                                         </TabPane>
                                         <TabPane tabId="link11">
                                             <p>

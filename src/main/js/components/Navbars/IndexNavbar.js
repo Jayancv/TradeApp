@@ -102,8 +102,8 @@ class ComponentsNavbar extends React.Component {
               tag={Link}
               id="navbar-brand"
             >
-              <span>Trade• </span>
-              Trade System React
+              <span>Yzee• </span>
+                Precast Plastic Solutions
             </NavbarBrand>
             <UncontrolledTooltip placement="bottom" target="navbar-brand">
               Designed and Coded by Jayan

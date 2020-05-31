@@ -17,6 +17,10 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+
+import "../../../resources/static/assets/css/nucleo-icons.css";
+import "../../../resources/static/assets/scss/blk-design-system-react.scss";
+import "../../../resources/static/assets/demo/demo.css";
 // reactstrap components
 import {
   Button,

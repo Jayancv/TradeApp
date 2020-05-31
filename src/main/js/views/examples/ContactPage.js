@@ -77,23 +77,16 @@ class ContactPage extends React.Component {
     };
   }
   componentDidMount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      document.documentElement.className += " perfect-scrollbar-on";
-      document.documentElement.classList.remove("perfect-scrollbar-off");
-      let tables = document.querySelectorAll(".table-responsive");
-      for (let i = 0; i < tables.length; i++) {
-        ps = new PerfectScrollbar(tables[i]);
-      }
-    }
     document.body.classList.toggle("contact-page");
+      document.documentElement.addEventListener("mousemove", this.followCursor);
+
   }
   componentWillUnmount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps.destroy();
-      document.documentElement.className += " perfect-scrollbar-off";
-      document.documentElement.classList.remove("perfect-scrollbar-on");
-    }
     document.body.classList.toggle("contact-page");
+      document.documentElement.removeEventListener(
+          "mousemove",
+          this.followCursor
+      );
   }
   toggleTabs = (e, stateName, index) => {
     e.preventDefault();
@@ -184,9 +177,9 @@ class ContactPage extends React.Component {
                     <div className="description">
                       <h4 className="info-title">Find us at the office</h4>
                       <p>
-                        Jayan Vidana, nr. 8, <br />
-                        7652 Bucharest, <br />
-                        Romania
+                          Yzee Precast Plastic Solutions Pty Ltd, <br />
+                          7652 Sydney, <br />
+                          Australia
                       </p>
                     </div>
                   </div>
@@ -197,7 +190,7 @@ class ContactPage extends React.Component {
                     <div className="description">
                       <h4 className="info-title">Give us a ring</h4>
                       <p>
-                        Jayan <br />
+                        Gayan Weerasinghe <br />
                         +40 762 321 762 <br />
                         Mon - Fri, 8:00-22:00
                       </p>

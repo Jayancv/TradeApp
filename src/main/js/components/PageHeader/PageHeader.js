@@ -33,9 +33,9 @@ class PageHeader extends React.Component {
         <div className="squares square7" />
         <Container>
           <div className="content-center brand">
-            <h1 className="h1-seo">Trade• App</h1>
+            <h1 className="h1-seo">Precast Plastic Solutions•</h1>
             <h3 className="d-none d-sm-block">
-              Plastic shop
+                Yzee Precast Plastic Solutions Pvt. Ltd
             </h3>
           </div>
         </Container>

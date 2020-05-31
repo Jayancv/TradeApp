@@ -31,34 +31,23 @@ module.exports = {
                     }
                 }]
             },
-            // {
-            //     test: /\.(png|svg|jpg|gif)$/,
-            //     use: [
-            //         'file-loader'
-            //     ]
-            // },
             {
-                // test: /\.(gif|png|jpe?g|svg)$/i,
-                // use: [
-                //     'file-loader',
-                //     {
-                //         loader: 'image-webpack-loader',
-                //         options: {
-                //             bypassOnDebug: true, // webpack@1.x
-                //             disable: true, // webpack@2.x and newer
-                //         },
-                //     },
-                // ],
-                test: /\.(png|jpg|gif|svg)$/,
-                loader: "url-loader",
-                options: {
-                    limit: 8192,
-                    fallback: "file-loader",
+                test: /\.html$/i,
+                use: 'html-loader'
+            },
 
-                    // fallback options
-                    name: '[name].[hash].[ext]',
-                    outputPath: 'images/css-urls/',
-                },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            esModule: false,
+                            outputPath: './images'
+                        },
+
+                    },
+                ],
             },
             {
                 test: /(\.css)$/,
@@ -70,8 +59,8 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-                loader: 'url-loader?limit=100000'
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=1024000'
             },
             {
                 test: /\.scss$/i,
@@ -83,7 +72,35 @@ module.exports = {
                     // Compiles Sass to CSS
                     'sass-loader',
                 ],
-            }
+            },
+            // {
+            //     test: /\.(png|svg|jpg|gif)$/,
+            //     use: [
+            //         'file-loader'
+            //     ]
+            // },
+            // {
+            //     // test: /\.(gif|png|jpe?g|svg)$/i,
+            //     // loaders:['image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false']
+            //
+            //
+            //
+            //     test: /\.(png|jpg|gif|svg)$/,
+            //     loader: "url-loader",
+            //     options: {
+            //         limit: 8192,
+            //         fallback: "file-loader",
+            //         output: {
+            //             path: __dirname
+            //         }
+            //         // fallback options
+            //         // name: '[name].[hash].[ext]',
+            //         // outputPath: './src/main/resources/static/images',
+            //
+            //         //publicPath: 'built'
+            //
+            //     },
+            // },
 
         ]
     }
