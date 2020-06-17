@@ -1,4 +1,5 @@
 package it.jayan.trade.model;
 
-public class OrderStatus {
+public enum OrderStatus {
+    PAID
 }

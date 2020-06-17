@@ -180,7 +180,16 @@ class ComponentsNavbar extends React.Component {
                   <p className="d-lg-none d-xl-none">Instagram</p>
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav>
+              <NavItem className="p-0">
+                 <NavLink tag={Link}
+                   to="/cart"
+                   title="View Cart"
+                   >
+                   <i className="tim-icons icon-cart" />
+                   <p className="d-lg-none d-xl-none">Cart</p>
+                 </NavLink>
+              </NavItem>
+            <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
                   color="default"

@@ -1,7 +1,7 @@
-import Item1 from '../../../resources/static/assets/img/prod_1.jpg'
-import Item2 from '../../../resources/static/assets/img/prod_2.jpg'
-import Item3 from '../../../resources/static/assets/img/prod_3.jpg'
-import Item4 from '../../../resources/static/assets/img/prod_4.jpg'
+import Item1 from '../../resources/static/assets/img/prod_1.jpg'
+import Item2 from '../../resources/static/assets/img/prod_2.jpg'
+import Item3 from '../../resources/static/assets/img/prod_3.jpg'
+import Item4 from '../../resources/static/assets/img/prod_4.jpg'
 
 import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../actions/action-types/cart-actions'
 

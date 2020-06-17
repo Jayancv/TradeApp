@@ -7,34 +7,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 
     @RequestMapping("/")
-    public String getIndex(){
+    public String getIndex() {
         return "index";
     }
+
     @RequestMapping("/components")
-    public String getCom(){
+    public String getCom() {
         return "index";
     }
 
     @RequestMapping("/landing-page")
-    public String getLanding(){
+    public String getLanding() {
         return "landingPage";
     }
 
     @RequestMapping("/profile-page")
-    public String getProfile(){
+    public String getProfile() {
         return "index";
     }
 
     @RequestMapping("/contact-page")
-    public String getContact(){
+    public String getContact() {
         return "index";
     }
 
-
-
-
     @RequestMapping("/home")
-    public String getHome(){
+    public String getHome() {
         return "home";
+    }
+
+    @RequestMapping("/cart")
+    public String getCart() {
+        return "index";
     }
 }

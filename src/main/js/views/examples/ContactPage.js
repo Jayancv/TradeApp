@@ -78,15 +78,15 @@ class ContactPage extends React.Component {
   }
   componentDidMount() {
     document.body.classList.toggle("contact-page");
-      document.documentElement.addEventListener("mousemove", this.followCursor);
+    document.documentElement.addEventListener("mousemove", this.followCursor);
 
   }
   componentWillUnmount() {
     document.body.classList.toggle("contact-page");
-      document.documentElement.removeEventListener(
-          "mousemove",
-          this.followCursor
-      );
+    document.documentElement.removeEventListener(
+      "mousemove",
+      this.followCursor
+    );
   }
   toggleTabs = (e, stateName, index) => {
     e.preventDefault();
@@ -106,7 +106,7 @@ class ContactPage extends React.Component {
                   <Card className="card-plain">
                     <CardHeader>
                       <h1 className="profile-title text-left">Contact</h1>
-                      <h5 className="text-on-back">03</h5>
+                      {/*<h5 className="text-on-back">03</h5>*/}
                     </CardHeader>
                     <CardBody>
                       <Form>
@@ -114,7 +114,7 @@ class ContactPage extends React.Component {
                           <Col md="6">
                             <FormGroup>
                               <label>Your Name</label>
-                              <Input defaultValue="Mike" type="text" />
+                              <Input placeholder="Mike" type="text" />
                             </FormGroup>
                           </Col>
                           <Col md="6">
@@ -131,13 +131,13 @@ class ContactPage extends React.Component {
                           <Col md="6">
                             <FormGroup>
                               <label>Phone</label>
-                              <Input defaultValue="001-12321345" type="text" />
+                              <Input placeholder="001-12321345" type="text" />
                             </FormGroup>
                           </Col>
                           <Col md="6">
                             <FormGroup>
                               <label>Company</label>
-                              <Input defaultValue="CreativeTim" type="text" />
+                              <Input placeholder="CreativeTim" type="text" />
                             </FormGroup>
                           </Col>
                         </Row>
@@ -177,7 +177,7 @@ class ContactPage extends React.Component {
                     <div className="description">
                       <h4 className="info-title">Find us at the office</h4>
                       <p>
-                          Yzee Precast Plastic Solutions Pty Ltd, <br />
+                        Yzee Precast Plastic Solutions Pty Ltd, <br />
                           7652 Sydney, <br />
                           Australia
                       </p>

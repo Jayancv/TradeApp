@@ -1,103 +1,60 @@
 package it.jayan.trade.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
-import java.util.Objects;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "product")
 public class Product {
-    private @Id @GeneratedValue long productID;
-    private String productName;
-    private String description;
-    private String imgLink;
-    private String count;
-    private String avail;
-    private @Version
-    @JsonIgnore long version;
 
-    public Product(String productName, String description, String imgLink, String count, String avail) {
-        this.productName = productName;
-        this.description = description;
-        this.imgLink = imgLink;
-        this.count = count;
-        this.avail = avail;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotNull(message = "Product name is required.")
+    @Basic(optional = false)
+    private String name;
+    private Double price;
+    private String pictureUrl;
+
+    public Product(Long id, @NotNull(message = "Product name is required.") String name, Double price, String pictureUrl) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.pictureUrl = pictureUrl;
     }
 
-    public long getProductID() {
-        return productID;
+    public Product() {
     }
 
-    public void setProductID(long productID) {
-        this.productID = productID;
+    public Long getId() {
+        return id;
     }
 
-    public String getProductName() {
-        return productName;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public String getName() {
+        return name;
     }
 
-    public String getDescription() {
-        return description;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public Double getPrice() {
+        return price;
     }
 
-    public String getImgLink() {
-        return imgLink;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
-    public void setImgLink(String imgLink) {
-        this.imgLink = imgLink;
+    public String getPictureUrl() {
+        return pictureUrl;
     }
 
-    public String getCount() {
-        return count;
-    }
-
-    public void setCount(String count) {
-        this.count = count;
-    }
-
-    public String getAvail() {
-        return avail;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Product)) return false;
-        Product product = (Product) o;
-        return getProductID() == product.getProductID() &&
-                getVersion() == product.getVersion() &&
-                Objects.equals(getProductName(), product.getProductName()) &&
-                Objects.equals(getDescription(), product.getDescription()) &&
-                Objects.equals(getImgLink(), product.getImgLink()) &&
-                Objects.equals(getCount(), product.getCount()) &&
-                Objects.equals(getAvail(), product.getAvail());
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(getProductID(), getProductName(), getDescription(), getImgLink(), getCount(), getAvail(), getVersion());
-    }
-
-    public void setAvail(String avail) {
-        this.avail = avail;
-    }
-
-    public long getVersion() {
-        return version;
-    }
-
-    public void setVersion(long version) {
-        this.version = version;
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
     }
 }

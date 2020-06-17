@@ -15,7 +15,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { addToCart } from '../../actions/cartActions'
+
 import classnames from "classnames";
 // reactstrap components
 import {
@@ -51,8 +54,37 @@ class Tabs extends React.Component {
         });
     };
 
+    handleClick = (id)=>{
+            this.props.addToCart(id);
+        }
+
     render() {
+
+    let itemList = this.props.items.map(item=>{
+                return(
+                    <div className="card1" key={item.id}>
+                            <div className="card1-image">
+                                <img src={item.img} alt={item.title}/>
+                                <span className="card1-title">{item.title}</span>
+                                <span to="/" className="tim-icons icon-cart" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></span>
+                            </div>
+
+                            <div className="card1-content">
+                                <p>{item.desc}</p>
+                                <p><b>Price: {item.price}$</b></p>
+                            </div>
+                     </div>
+
+                )
+            });
         return (
+            <div>
+            <div className="container">
+                <h3 className="center">Our items</h3>
+                <div className="box1">
+                    {itemList}
+                </div>
+            </div>
             <div className="section section-tabs">
                 <Container>
                     <div className="title">
@@ -423,8 +455,21 @@ class Tabs extends React.Component {
                     </Row>
                 </Container>
             </div>
+            </div>
         );
     }
 }
 
-export default Tabs;
+const mapStateToProps = (state)=>{
+    return {
+      items: state.items
+    }
+  }
+const mapDispatchToProps= (dispatch)=>{
+
+    return{
+        addToCart: (id)=>{dispatch(addToCart(id))}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Tabs);
