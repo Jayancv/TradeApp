@@ -8,10 +8,10 @@ import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '
 
 const initState = {
     items: [
-        {id:1,title:'Winter body', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:110,img:Item1},
-        {id:2,title:'Adidas', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:80,img: Item2},
-        {id:3,title:'Vans', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",price:120,img: Item3},
-        {id:4,title:'White', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:260,img:Item4}
+        {id:1,title:'Product 1', desc: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", spec: "Size 11 cm ", price:110,img:Item1},
+        {id:2,title:'Product 2', desc: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", spec: "Size 12 cm ", price:80,img: Item2},
+        {id:3,title:'Product 3', desc: "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", spec: "Size 13 cm ",price:120,img: Item3},
+        {id:4,title:'Product 4', desc: "4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", spec: "Size 14 cm ", price:260,img:Item4}
 
     ],
     addedItems:[],

@@ -54,7 +54,7 @@ class Index extends React.Component {
 
 
 
-            <Basics />
+            {/* <Basics />
             <Navbars />
 
             <Pagination />
@@ -64,7 +64,7 @@ class Index extends React.Component {
             <NucleoIcons />
             <Signup />
             <Examples />
-            <Download />
+            <Download /> */}
           </div>
           <Footer />
         </div>
